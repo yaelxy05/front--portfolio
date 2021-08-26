@@ -1,0 +1,51 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.nav {
+  .nav_banner--top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    border-bottom: 1px solid vars.$colorBorderPrimary;
+    box-shadow: 0 3px 5px vars.$colorTitleLight;
+    .nav_logo--box {
+      .nav_logo {
+        height: 2rem;
+        width: auto;
+        border-radius: 10px;
+      }
+    }
+    .nav_bar {
+      ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .fa-home {
+          color: vars.$colorIcon;
+        }
+        li {
+          padding: 0 2rem;
+          color: vars.$colorTitleMenu;
+        }
+      }
+    }
+  }
+
+  .nav_banner {
+    height: 25rem;
+    background-image: url('../../assets/images/pexels-hristo-fidanov-1252873.jpg');
+    background-position: center;
+    background-size: cover;
+    @include mixins.flexcenterColumn;
+
+    p {
+      color: vars.$colorTitleLight;
+      font-size: vars.$sizeTitle + 1;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-family: vars.$policeTitle;
+    }
+  }
+}
