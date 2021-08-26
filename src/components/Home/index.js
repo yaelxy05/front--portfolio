@@ -8,10 +8,10 @@ import picture from '../../assets/images/portfolio-img.jpg';
 // == Composant
 const Home = () => (
   <div className="home">
-    <h1 class="home_h1">Présentation</h1>
-    <div class="home_presentation">
+    <h1 className="home_h1">Présentation</h1>
+    <div className="home_presentation">
       <img className="home_picture" src={picture} alt="picture-presentation" />
-      <div class="home_presentation--box">
+      <div className="home_presentation--box">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
           consequatur minus, error voluptatibus vero deserunt tempore omnis!

@@ -8,15 +8,15 @@ import './nav.scss';
 // == Composant
 const Nav = () => (
   <div className="nav">
-    <div class="nav_banner--top">
-      <div class="nav_logo--box">
+    <div className="nav_banner--top">
+      <div className="nav_logo--box">
         <img className="nav_logo" src={logoNav} alt="logo" />
       </div>
 
-      <div class="nav_bar">
+      <div className="nav_bar">
         <ul>
           <li>
-            <i class="fas fa-home"></i>
+            <i className="fas fa-home"></i>
           </li>
           <li>Compétences</li>
           <li>Mes créations</li>
@@ -25,7 +25,7 @@ const Nav = () => (
         </ul>
       </div>
     </div>
-    <div class="nav_banner">
+    <div className="nav_banner">
       <p>Bonjour, </p>
       <p>Je suis Yaël HUE</p>
       <p>Développeur web Fullstack</p>
