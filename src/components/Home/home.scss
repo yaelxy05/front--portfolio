@@ -54,6 +54,12 @@
         font-weight: bold;
         font-size: vars.$sizeButton;
         width: 80%;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+          background-color: vars.$colorTitleMenu;
+          color: vars.$colorTitleLight;
+        }
       }
     }
   }
