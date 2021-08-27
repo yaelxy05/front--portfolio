@@ -13,10 +13,11 @@ const Home = () => (
       <img className="home_picture" src={picture} alt="picture-presentation" />
       <div className="home_presentation--box">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-          consequatur minus, error voluptatibus vero deserunt tempore omnis!
+          Développeur Web front et back-end, je suis spécialisé sur le framework
+          React et sur le CSM Wordpress(création de thèmes et de plugins).
+          J'utilise également la technologie Sass pour l'intégration Css.
         </p>
-        <button>Mon portfolio</button>
+        <button>Mes projets</button>
       </div>
     </div>
   </div>
