@@ -29,6 +29,7 @@ const Nav = () => (
           </li>
           <li>A propos</li>
           <li>Contact</li>
+          <li>Mon CV</li>
         </ul>
       </div>
     </div>
