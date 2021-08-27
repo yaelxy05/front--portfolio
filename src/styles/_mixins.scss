@@ -1,3 +1,5 @@
+@use 'src/styles/vars';
+
 @mixin flexcenter {
   display: flex;
   justify-content: center;
@@ -17,6 +19,14 @@
   align-items: center;
 }
 
+@mixin h1Title {
+  color: vars.$colorTitleMenu;
+  border-bottom: 3px solid vars.$colorBorderBottom;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 3rem 0;
+  font-size: vars.$sizeTitle;
+}
 @mixin for-phone-only {
   @media (max-width: 599px) {
     @content;

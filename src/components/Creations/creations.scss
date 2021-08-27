@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.creations {
+  @include mixins.flexcenterColumn;
+  margin: 5rem 0;
+
+  .creations_h1 {
+    @include mixins.h1Title;
+  }
+}

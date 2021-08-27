@@ -1,5 +1,6 @@
 // == Import npm
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 // == Import
 import './home.scss';
 // == Import Img
@@ -17,7 +18,9 @@ const Home = () => (
           React et sur le CMS Wordpress(création de thèmes et de plugins).
           J'utilise également la technologie Sass pour l'intégration Css.
         </p>
-        <button>Mes projets</button>
+        <button>
+          <NavLink to="/creations">Mes projets</NavLink>
+        </button>
       </div>
     </div>
   </div>
