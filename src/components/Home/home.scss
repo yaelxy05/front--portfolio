@@ -2,19 +2,11 @@
 @use 'src/styles/mixins';
 
 .home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flexcenterColumn;
   margin: 5rem 0;
 
   .home_h1 {
-    color: vars.$colorTitleMenu;
-    border-bottom: 3px solid vars.$colorBorderBottom;
-    text-align: center;
-    padding-bottom: 1rem;
-    margin: 3rem 0;
-    font-size: vars.$sizeTitle;
+    @include mixins.h1Title;
   }
 
   .home_presentation {

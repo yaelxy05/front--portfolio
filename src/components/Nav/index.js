@@ -1,5 +1,6 @@
 // == Import npm
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 // == Import Img
 import logoNav from '../../assets/images/logov4.png';
 // == Import
@@ -16,10 +17,16 @@ const Nav = () => (
       <div className="nav_bar">
         <ul>
           <li>
-            <i className="fas fa-home"></i>
+            <NavLink to="/">
+              <i className="fas fa-home"></i>
+            </NavLink>
           </li>
-          <li>Compétences</li>
-          <li>Mes créations</li>
+          <li>
+            <NavLink to="/skills">Compétences</NavLink>
+          </li>
+          <li>
+            <NavLink to="/creations">Mes créations</NavLink>
+          </li>
           <li>A propos</li>
           <li>Contact</li>
         </ul>

@@ -3,9 +3,7 @@
 
 .nav {
   .nav_banner--top {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include mixins.flexAroundCenter;
     height: 4.2rem;
     box-shadow: 0px 1px 5px rgb(233, 233, 233);
     position: relative;
@@ -20,10 +18,7 @@
     }
     .nav_bar {
       ul {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
+        @include mixins.flexAroundCenter;
         .fa-home {
           color: vars.$colorIcon;
         }

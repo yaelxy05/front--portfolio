@@ -5,10 +5,7 @@
   height: 17rem;
   width: 100%;
   background-color: vars.$colorPara;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include mixins.flexcenterColumn;
 
   .footer_icon--top {
     display: flex;
