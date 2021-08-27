@@ -17,9 +17,16 @@ const Home = () => (
           Développeur Web front et back-end, je suis spécialisé sur le framework
           React et sur le CMS Wordpress(création de thèmes et de plugins).
           J'utilise également la technologie Sass pour l'intégration Css.
+          <br />
+          <br />
+          Durant 7 mois j'ai éffectué une formation de développeur web et web
+          mobile à l'école O'clock. Au début de la formation j'ai appris les
+          bases du développement web (terminal,Git,Javascript,php ainsi que
+          Wordpress), ensuite j'ai éffectué une spécialité en React et une
+          spécialité en Wordpress.
         </p>
         <button>
-          <NavLink to="/creations">Mes projets</NavLink>
+          <NavLink to="/creations">Accéder à mes projets</NavLink>
         </button>
       </div>
     </div>
