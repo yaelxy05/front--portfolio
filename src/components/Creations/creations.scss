@@ -3,7 +3,8 @@
 
 .creations {
   @include mixins.flexcenterColumn;
-  margin: 5rem 0;
+  margin: 2rem 0;
+  min-height: 40vh;
 
   .creations_h1 {
     @include mixins.h1Title;

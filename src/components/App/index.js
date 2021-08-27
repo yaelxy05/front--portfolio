@@ -1,5 +1,5 @@
 // == Import npm
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 // Composants
 import Nav from 'src/components/Nav';
@@ -11,23 +11,25 @@ import Footer from 'src/components/Footer';
 import './app.scss';
 
 // == Composant
-const App = () => (
-  <div className="app">
-    <Nav />
-    <Switch>
-      <Route path="/skills">
-        <Skills />
-      </Route>
-      <Route path="/creations">
-        <Creations />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
-    <Footer />
-  </div>
-);
+const App = () => {
+  return (
+    <div className="app">
+      <Nav />
+      <Switch>
+        <Route path="/skills">
+          <Skills />
+        </Route>
+        <Route path="/creations">
+          <Creations />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+      <Footer />
+    </div>
+  );
+};
 
 // == Export
 export default App;
