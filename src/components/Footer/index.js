@@ -7,6 +7,14 @@ import './footer.scss';
 // == Composant
 const Footer = () => (
   <div className="footer">
+    <div className="footer_icon--top">
+      <a href="http://https://github.com/yaelxy05/">
+        <i className="fab fa-github"></i>
+      </a>
+      <a href="http://https://www.linkedin.com/in/hueyael/">
+        <i className="fab fa-linkedin-in"></i>
+      </a>
+    </div>
     <div className="footer_info">
       <div className="footer_info--box footer_local">
         <i className="fas fa-map-marker-alt"></i>
@@ -23,6 +31,10 @@ const Footer = () => (
       <div className="footer_info--box footer_phone">
         <i className="fas fa-mobile-alt"></i>
         <p>07.81.28.51.47</p>
+      </div>
+      <div className="footer_info--box footer_copyright">
+        <i className="far fa-copyright"></i>
+        <p>yaelhue-creation</p>
       </div>
     </div>
   </div>

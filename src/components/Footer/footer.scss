@@ -6,18 +6,33 @@
   width: 100%;
   background-color: vars.$colorPara;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  .footer_icon--top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+
+    .fab {
+      padding: 1.2rem;
+      margin-right: 2rem;
+      border: solid 1.5px vars.$colorTitleLight;
+      border-radius: 200px;
+      color: vars.$colorTitleLight;
+    }
+  }
   .footer_info {
     color: vars.$colorTitleLight;
-    margin-right: 4rem;
+    margin: 0 4rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 
     .footer_info--box {
       display: flex;
+      margin: 0 2rem;
     }
 
     p {
@@ -27,6 +42,11 @@
     .footer_mail {
       p {
         padding-left: 0.8rem;
+      }
+    }
+    .footer_copyright {
+      p {
+        padding-left: 0.3rem;
       }
     }
   }
