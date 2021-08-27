@@ -14,7 +14,7 @@ const Home = () => (
       <div className="home_presentation--box">
         <p>
           Développeur Web front et back-end, je suis spécialisé sur le framework
-          React et sur le CSM Wordpress(création de thèmes et de plugins).
+          React et sur le CMS Wordpress(création de thèmes et de plugins).
           J'utilise également la technologie Sass pour l'intégration Css.
         </p>
         <button>Mes projets</button>
