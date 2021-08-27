@@ -1,0 +1,33 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.footer {
+  height: 17rem;
+  width: 100%;
+  background-color: vars.$colorPara;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  .footer_info {
+    color: vars.$colorTitleLight;
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .footer_info--box {
+      display: flex;
+    }
+
+    p {
+      padding-bottom: 2rem;
+      padding-left: 1rem;
+    }
+    .footer_mail {
+      p {
+        padding-left: 0.8rem;
+      }
+    }
+  }
+}

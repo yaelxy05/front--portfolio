@@ -7,8 +7,10 @@
     justify-content: space-around;
     align-items: center;
     height: 4.2rem;
-    border-bottom: 1px solid vars.$colorBorderPrimary;
-    box-shadow: 0 3px 5px vars.$colorTitleLight;
+    box-shadow: 0px 1px 5px rgb(233, 233, 233);
+    position: relative;
+    z-index: 10;
+
     .nav_logo--box {
       .nav_logo {
         height: 2.8rem;
