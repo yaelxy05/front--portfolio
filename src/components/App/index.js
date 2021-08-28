@@ -7,6 +7,7 @@ import Home from 'src/components/Home';
 import Creations from 'src/components/Creations';
 import Skills from 'src/components/Skills';
 import Footer from 'src/components/Footer';
+import TestEffectJs from 'src/components/TestEffectJs';
 // == Import
 import './app.scss';
 
@@ -16,6 +17,9 @@ const App = () => {
     <div className="app">
       <Nav />
       <Switch>
+        <Route path="/test">
+          <TestEffectJs />
+        </Route>
         <Route path="/skills">
           <Skills />
         </Route>

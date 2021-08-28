@@ -1,0 +1,24 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.creations {
+  @include mixins.flexcenterColumn;
+  margin: 2rem 0;
+  min-height: 40vh;
+
+  .creations_h1 {
+    @include mixins.h1Title;
+  }
+
+  .box {
+    width: 200px;
+    height: 200px;
+    background: salmon;
+    transition: all ease-in-out 1s;
+  }
+
+  .animated {
+    background: lightblue;
+    transform: scaleX(3);
+  }
+}
