@@ -7,20 +7,22 @@ import './nav.scss';
 const NavLinks = (props) => {
   return (
     <ul>
-      <li onClick={() => props.closeMobileMenu()}>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <NavLink to="/">
           <i className="fas fa-home"></i>
         </NavLink>
       </li>
-      <li onClick={() => props.closeMobileMenu()}>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <NavLink to="/skills">Compétences</NavLink>
       </li>
-      <li onClick={() => props.closeMobileMenu()}>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <NavLink to="/creations">Mes créations</NavLink>
       </li>
-      <li onClick={() => props.closeMobileMenu()}>A propos</li>
-      <li onClick={() => props.closeMobileMenu()}>Contact</li>
-      <li onClick={() => props.closeMobileMenu()}>Mon CV</li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
+        A propos
+      </li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>Contact</li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>Mon CV</li>
     </ul>
   );
 };

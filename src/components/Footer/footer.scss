@@ -3,6 +3,9 @@
 
 .footer {
   height: 17rem;
+  @include mixins.for-phone-and-tablet-only {
+    height: 22rem;
+  }
   width: 100%;
   background-color: vars.$colorPara;
   @include mixins.flexcenterColumn;

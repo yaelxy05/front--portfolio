@@ -4,7 +4,6 @@
 .home {
   @include mixins.flexcenterColumn;
   margin: 5rem 0;
-
   .home_h1 {
     @include mixins.h1Title;
   }
