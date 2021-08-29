@@ -4,7 +4,10 @@
 .nav {
   .nav_banner--top {
     display: flex;
-    justify-content: flex-end;
+    @include mixins.for-phone-and-tablet-only {
+      justify-content: flex-end;
+    }
+    justify-content: space-around;
     align-items: center;
     height: 4.2rem;
     box-shadow: 0px 1px 5px rgb(233, 233, 233);
@@ -17,7 +20,7 @@
       margin-top: 6rem;
       right: 0;
 
-      @include mixins.for-phone-only {
+      @include mixins.for-phone-and-tablet-only {
         width: 80%;
       }
       .nav_burger-icon {
@@ -33,9 +36,6 @@
           padding-top: 0.7rem;
           cursor: pointer;
           transition: 0.5s ease-in-out;
-          @include mixins.for-tablet-portrait-up {
-            display: none;
-          }
           @include mixins.for-tablet-landscape-up {
             display: none;
           }
@@ -47,6 +47,10 @@
       }
     }
     .nav_logo--box {
+      @include mixins.for-phone-only {
+        margin: 0 1rem;
+      }
+      margin: 0 3rem;
       .nav_logo {
         height: 2.8rem;
         width: auto;
@@ -54,17 +58,18 @@
       }
     }
     .header_nav-mobile {
+      right: 0;
       animation: burgerAnimationToActive 0.5s ease-in-out;
       display: none;
       z-index: 33;
-      @include mixins.for-tablet-portrait-up {
+      @include mixins.for-tablet-landscape-up {
         display: none;
       }
     }
     .actived {
       animation: burgerAnimationToActive 0.5s ease-in-out;
       display: none;
-      @include mixins.for-tablet-portrait-up {
+      @include mixins.for-tablet-landscape-up {
         display: none;
       }
       display: flex;
@@ -76,7 +81,7 @@
       background-color: vars.$colorParaTransparent;
       z-index: 22;
       border-bottom-left-radius: 10px;
-      @include mixins.for-tablet-portrait-up {
+      @include mixins.for-tablet-landscape-up {
         display: none;
       }
       ul {
@@ -108,10 +113,13 @@
       }
     }
     .nav_bar {
-      @include mixins.for-phone-only {
+      @include mixins.for-phone-and-tablet-only {
         display: none;
       }
       ul {
+        @include mixins.for-desktop-up {
+          justify-self: flex-end;
+        }
         @include mixins.flexAroundCenter;
         .fa-home {
           color: vars.$colorIcon;
