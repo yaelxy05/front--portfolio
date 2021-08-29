@@ -10,6 +10,7 @@ const MobileNavigation = () => {
     //console.log(e.target.value);
     setToggle(!toggle);
   };
+  const closeMobileMenu = () => setToggle(true);
   return (
     <div className="nav_wrapper-mobile">
       <div className="nav_wrapper--top">
@@ -25,7 +26,7 @@ const MobileNavigation = () => {
           <li className="cross" onClick={changeState}>
             <i className="fas fa-times"></i>
           </li>
-          <NavLinks />
+          <NavLinks closeMobileMenu={closeMobileMenu} />
         </ul>
       </div>
     </div>
