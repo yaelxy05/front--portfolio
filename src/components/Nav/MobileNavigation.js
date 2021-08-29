@@ -23,9 +23,6 @@ const MobileNavigation = () => {
 
       <div className={toggle ? 'header_nav-mobile' : 'actived'}>
         <ul className="header_link">
-          <li className="cross" onClick={changeState}>
-            <i className="fas fa-times"></i>
-          </li>
           <NavLinks closeMobileMenu={closeMobileMenu} />
         </ul>
       </div>
