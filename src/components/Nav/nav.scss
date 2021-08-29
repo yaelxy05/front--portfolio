@@ -3,21 +3,123 @@
 
 .nav {
   .nav_banner--top {
-    @include mixins.flexAroundCenter;
+    display: flex;
+    @include mixins.for-phone-and-tablet-only {
+      justify-content: flex-end;
+    }
+    justify-content: space-around;
+    align-items: center;
     height: 4.2rem;
     box-shadow: 0px 1px 5px rgb(233, 233, 233);
-    position: relative;
     z-index: 10;
+    .nav_wrapper-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-top: 6rem;
+      right: 0;
 
+      @include mixins.for-phone-and-tablet-only {
+        width: 80%;
+      }
+      .nav_burger-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 7rem;
+        margin-right: 2rem;
+
+        span {
+          border-bottom: solid vars.$color-border-bottom 2px;
+          width: 2rem;
+          padding-top: 0.7rem;
+          cursor: pointer;
+          transition: 0.5s ease-in-out;
+          @include mixins.for-tablet-landscape-up {
+            display: none;
+          }
+        }
+      }
+      .nav_burger-icon.open span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+    }
     .nav_logo--box {
+      @include mixins.for-phone-only {
+        margin: 0 1rem;
+      }
+      margin: 0 3rem;
       .nav_logo {
         height: 2.8rem;
         width: auto;
         border-radius: 10px;
       }
     }
-    .nav_bar {
+    .header_nav-mobile {
+      right: 0;
+      animation: burgerAnimationToActive 0.5s ease-in-out;
+      display: none;
+      z-index: 33;
+      @include mixins.for-tablet-landscape-up {
+        display: none;
+      }
+    }
+    .actived {
+      animation: burgerAnimationToActive 0.5s ease-in-out;
+      display: none;
+      @include mixins.for-tablet-landscape-up {
+        display: none;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: 22rem;
+      background-color: vars.$colorParaTransparent;
+      z-index: 22;
+      border-bottom-left-radius: 10px;
+      @include mixins.for-tablet-landscape-up {
+        display: none;
+      }
       ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 1rem;
+      }
+      li {
+        padding: 0.5rem;
+        color: vars.$colorTitleLight;
+        text-decoration: none;
+      }
+
+      .cross {
+        align-self: flex-end;
+        justify-content: flex-end;
+        cursor: pointer;
+        padding-right: 3rem;
+      }
+    }
+
+    @keyframes burgerAnimationToActive {
+      0% {
+        transform: translateX(25%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    .nav_bar {
+      @include mixins.for-phone-and-tablet-only {
+        display: none;
+      }
+      ul {
+        @include mixins.for-desktop-up {
+          justify-self: flex-end;
+        }
         @include mixins.flexAroundCenter;
         .fa-home {
           color: vars.$colorIcon;
