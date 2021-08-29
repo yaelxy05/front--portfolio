@@ -97,14 +97,12 @@
       li {
         padding: 0.5rem;
         color: vars.$colorTitleLight;
+        font-weight: bold;
         text-decoration: none;
-      }
 
-      .cross {
-        align-self: flex-end;
-        justify-content: flex-end;
-        cursor: pointer;
-        padding-right: 3rem;
+        &:hover {
+          color: vars.$colorBorderBottom;
+        }
       }
     }
 
