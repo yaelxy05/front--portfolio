@@ -14,12 +14,19 @@
     align-items: flex-start;
     margin-top: 2rem;
     width: 80%;
+    @include mixins.for-phone-and-tablet-only {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .home_picture {
       border-radius: 15px;
       margin-right: 5rem;
       height: 15rem;
       width: auto;
+      @include mixins.for-phone-and-tablet-only {
+        margin-right: 0;
+      }
     }
     .home_presentation--box {
       display: flex;
@@ -28,6 +35,12 @@
       align-items: stretch;
       width: 30%;
       color: vars.$colorPara;
+      @include mixins.for-phone-and-tablet-only {
+        width: 70%;
+        margin: 2rem 0;
+        justify-content: center;
+        align-items: center;
+      }
 
       p {
         padding-bottom: 1rem;
@@ -35,7 +48,7 @@
       }
 
       button {
-        margin-top: 2rem;
+        margin: 2rem 0;
         padding: 1rem;
         color: vars.$colorPara;
         background: vars.$colorTitleLight;
@@ -46,6 +59,9 @@
         font-size: vars.$sizeButton;
         width: 80%;
         transition: all 1s ease-in-out;
+        @include mixins.for-phone-and-tablet-only {
+          width: 100%;
+        }
 
         &:hover {
           background-color: vars.$colorTitleMenu;
