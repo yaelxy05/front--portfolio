@@ -14,7 +14,10 @@ const MobileNavigation = () => {
   return (
     <div className="nav_wrapper-mobile">
       <div className="nav_wrapper--top">
-        <div className="nav_burger-icon" onClick={changeState}>
+        <div
+          className={toggle ? 'nav_burger-icon--open' : 'nav_burger-icon'}
+          onClick={changeState}
+        >
           <span className="line1"></span>
           <span className="line2"></span>
           <span className="line3"></span>
