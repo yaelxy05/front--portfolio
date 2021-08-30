@@ -15,35 +15,86 @@
     .nav_wrapper-mobile {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: flex-end;
-      margin-top: 6rem;
-      right: 0;
 
       @include mixins.for-phone-and-tablet-only {
         width: 80%;
       }
       .nav_burger-icon {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 7rem;
-        margin-right: 2rem;
+        width: 35px;
+        height: 10px;
+        position: relative;
+
+        margin-right: 1rem;
+        margin-bottom: 1.4rem;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
 
         span {
-          border-bottom: solid vars.$color-border-bottom 2px;
-          width: 2rem;
-          padding-top: 0.7rem;
-          cursor: pointer;
-          transition: 0.5s ease-in-out;
+          display: block;
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          background: #d3531a;
+          border-radius: 9px;
+          opacity: 1;
+          left: 0;
+          transform: rotate(0deg);
+          transition: 0.25s ease-in-out;
           @include mixins.for-tablet-landscape-up {
             display: none;
           }
         }
+        span:nth-child(1) {
+          top: 0px;
+        }
+
+        span:nth-child(2) {
+          top: 18px;
+        }
+
+        span:nth-child(3) {
+          top: 36px;
+        }
       }
-      .nav_burger-icon.open span:nth-child(2) {
-        opacity: 0;
-        left: -60px;
+      .nav_burger-icon--open {
+        width: 35px;
+        height: 10px;
+        position: relative;
+        margin-right: 1rem;
+        transform: rotate(90deg);
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+
+        span {
+          display: block;
+          position: absolute;
+          height: 4px;
+          width: 100%;
+          background: #d3531a;
+          border-radius: 9px;
+          opacity: 1;
+          left: 0;
+          transform: rotate(135deg);
+          transition: 0.25s ease-in-out;
+          @include mixins.for-tablet-landscape-up {
+            display: none;
+          }
+        }
+        span:nth-child(1) {
+          top: 18px;
+          transform: rotate(135deg);
+        }
+        span:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+        }
+        span:nth-child(3) {
+          top: 18px;
+          transform: rotate(-135deg);
+        }
       }
     }
     .nav_logo--box {
@@ -58,10 +109,12 @@
       }
     }
     .header_nav-mobile {
-      right: 0;
-      animation: burgerAnimationToActive 0.5s ease-in-out;
+      animation: burgerAnimationToDeactive 0.5s ease-out;
       display: none;
       z-index: 33;
+      position: absolute;
+      top: 4.2rem;
+      right: -15%;
       @include mixins.for-tablet-landscape-up {
         display: none;
       }
@@ -114,6 +167,15 @@
         transform: translateX(0%);
       }
     }
+
+    @keyframes burgerAnimationToDeactive {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-25%);
+      }
+    }
     .nav_bar {
       @include mixins.for-phone-and-tablet-only {
         display: none;
@@ -137,6 +199,22 @@
           }
         }
       }
+    }
+  }
+
+  .nav_banner {
+    height: 28rem;
+    background-image: url('../../assets/images/pexels-hristo-fidanov-1252873.jpg');
+    background-position: center;
+    background-size: cover;
+    @include mixins.flexcenterColumn;
+
+    p {
+      color: vars.$colorTitleLight;
+      font-size: vars.$sizeTitle + 1;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-family: vars.$policeTitle;
     }
   }
 }
