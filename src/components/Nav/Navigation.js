@@ -7,9 +7,9 @@ import './nav.scss';
 const Navigation = () => {
   return (
     <div className="nav_bar">
-      <ul>
+      <>
         <NavLinks />
-      </ul>
+      </>
     </div>
   );
 };
