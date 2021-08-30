@@ -41,7 +41,7 @@
   font-size: vars.$sizeTitle;
 }
 @mixin h2Title {
-  color: vars.$colorTitleMenu;
+  color: vars.$colorPara;
   border-bottom: 3px solid vars.$colorBorderBottom;
   text-align: center;
   padding-bottom: 1rem;
