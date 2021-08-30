@@ -18,7 +18,7 @@ const Footer = () => (
     <div className="footer_info">
       <div className="footer_info--box footer_local">
         <i className="fas fa-map-marker-alt"></i>
-        <p>
+        <p className="footer_p--adress">
           236 Route de Rabou <br />
           05400 La Roche des Arnauds <br />
           France

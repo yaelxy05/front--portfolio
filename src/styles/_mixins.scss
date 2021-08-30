@@ -1,5 +1,18 @@
 @use 'src/styles/vars';
 
+@mixin flexStartCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnStartCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @mixin flexcenter {
   display: flex;
   justify-content: center;
@@ -27,6 +40,15 @@
   margin: 3rem 0;
   font-size: vars.$sizeTitle;
 }
+@mixin h2Title {
+  color: vars.$colorTitleMenu;
+  border-bottom: 3px solid vars.$colorBorderBottom;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 2rem 0;
+  font-size: vars.$sizeTitlePhone;
+}
+
 @mixin for-phone-only {
   @media (max-width: 599px) {
     @content;
