@@ -19,12 +19,6 @@ const Nav = () => {
         <Navigation />
         <MobileNavigation />
       </div>
-
-      <div className="nav_banner">
-        <p>Bonjour, </p>
-        <p>Je suis Yaël HUE</p>
-        <p>Développeur web Fullstack</p>
-      </div>
     </div>
   );
 };

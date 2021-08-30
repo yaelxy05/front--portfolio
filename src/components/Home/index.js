@@ -1,6 +1,7 @@
 // == Import npm
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Banner from './Banner';
 // == Import
 import './home.scss';
 // == Import Img
@@ -9,6 +10,7 @@ import picture from '../../assets/images/portfolio-img.jpg';
 // == Composant
 const Home = () => (
   <div className="home">
+    <Banner />
     <h1 className="home_h1">Présentation</h1>
     <div className="home_presentation">
       <img className="home_picture" src={picture} alt="picture-presentation" />
