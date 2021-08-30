@@ -23,10 +23,12 @@
       }
       .nav_burger-icon {
         width: 35px;
-        height: 10px;
+        height: 12px;
         position: relative;
-
         margin-right: 1rem;
+        @include mixins.for-tablet-portrait-up {
+          margin-right: 3rem;
+        }
         margin-bottom: 1.4rem;
         transform: rotate(0deg);
         transition: 0.5s ease-in-out;
@@ -35,9 +37,10 @@
         span {
           display: block;
           position: absolute;
-          height: 3px;
+          height: 4px;
           width: 100%;
           background: #d3531a;
+          cursor: pointer;
           border-radius: 9px;
           opacity: 1;
           left: 0;
@@ -52,22 +55,23 @@
         }
 
         span:nth-child(2) {
-          top: 18px;
+          top: 12px;
         }
 
         span:nth-child(3) {
-          top: 36px;
+          top: 24px;
         }
       }
       .nav_burger-icon--open {
         width: 35px;
-        height: 10px;
+        height: 15px;
+        @include mixins.for-tablet-portrait-up {
+          margin-right: 2.5rem;
+        }
         position: relative;
-        margin-right: 1rem;
         transform: rotate(90deg);
         transition: 0.5s ease-in-out;
         cursor: pointer;
-
         span {
           display: block;
           position: absolute;
@@ -76,7 +80,6 @@
           background: #d3531a;
           border-radius: 9px;
           opacity: 1;
-          left: 0;
           transform: rotate(135deg);
           transition: 0.25s ease-in-out;
           @include mixins.for-tablet-landscape-up {
