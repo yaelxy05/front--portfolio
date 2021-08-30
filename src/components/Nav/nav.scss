@@ -129,6 +129,12 @@
         li {
           padding: 0 2rem;
           color: vars.$colorTitleMenu;
+          font-weight: 500;
+
+          &:hover {
+            color: vars.$colorBorderBottom;
+            font-weight: bold;
+          }
         }
       }
     }
