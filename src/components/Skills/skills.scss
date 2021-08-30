@@ -2,9 +2,9 @@
 @use 'src/styles/mixins';
 
 .skills {
-  @include mixins.flexcenterColumn;
-  margin: 2rem 0;
-  min-height: 40vh;
+  @include mixins.flexColumnStartCenter;
+  min-height: 100vh;
+  width: 100%;
 
   .skills_h1 {
     @include mixins.h1Title;

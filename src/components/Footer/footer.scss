@@ -29,10 +29,23 @@
     margin: 0 4rem;
     display: flex;
     justify-content: center;
+    @include mixins.for-phone-and-tablet-only {
+      flex-direction: column;
+    }
 
     .footer_info--box {
       display: flex;
       margin: 0 2rem;
+      .footer_p--adress {
+        @include mixins.for-phone-and-tablet-only {
+          display: none;
+        }
+      }
+      .fa-map-marker-alt {
+        @include mixins.for-phone-and-tablet-only {
+          display: none;
+        }
+      }
     }
 
     p {
