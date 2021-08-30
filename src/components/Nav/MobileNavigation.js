@@ -5,12 +5,12 @@ import NavLinks from './NavLinks';
 import './nav.scss';
 
 const MobileNavigation = () => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const changeState = () => {
     //console.log(e.target.value);
     setToggle(!toggle);
   };
-  const closeMobileMenu = () => setToggle(true);
+  const closeMobileMenu = () => setToggle(false);
   return (
     <div className="nav_wrapper-mobile">
       <div className="nav_wrapper--top">
@@ -21,9 +21,11 @@ const MobileNavigation = () => {
         </div>
       </div>
 
-      <div className={toggle ? 'header_nav-mobile' : 'actived'}>
+      <div className={toggle ? 'actived' : 'header_nav-mobile'}>
         <ul className="header_link">
-          <NavLinks closeMobileMenu={closeMobileMenu} />
+          {toggle && (
+            <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} />
+          )}
         </ul>
       </div>
     </div>
