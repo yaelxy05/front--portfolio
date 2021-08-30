@@ -13,13 +13,16 @@
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+    @include mixins.for-phone-and-tablet-only {
+      flex-wrap: wrap;
+      margin: 0;
+    }
 
     .skills_icons_box {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      margin-right: 5rem;
+      margin-right: 2rem;
 
       .skills_icon {
         width: 8rem;
@@ -31,6 +34,7 @@
       p {
         text-align: center;
         margin-top: 1rem;
+        font-size: vars.$sizeTitlePhone;
       }
     }
   }
