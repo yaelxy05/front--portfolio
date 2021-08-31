@@ -200,6 +200,17 @@
             color: vars.$colorBorderBottom;
             font-weight: bold;
           }
+          .current {
+            border-bottom: 3px solid vars.$colorBorderBottom;
+            padding-bottom: 0.5rem;
+            transition: all ease-in-out 0.2s;
+          }
+
+          .current-home {
+            .fa-home {
+              color: vars.$colorBorderBottom;
+            }
+          }
         }
       }
     }

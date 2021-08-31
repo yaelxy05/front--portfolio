@@ -8,15 +8,19 @@ const NavLinks = (props) => {
   return (
     <ul>
       <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-        <NavLink to="/">
+        <NavLink exact to="/" activeClassName="current-home">
           <i className="fas fa-home"></i>
         </NavLink>
       </li>
       <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-        <NavLink to="/skills">Compétences</NavLink>
+        <NavLink exact to="/skills" activeClassName="current">
+          Compétences
+        </NavLink>
       </li>
       <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-        <NavLink to="/creations">Mes créations</NavLink>
+        <NavLink exact to="/creations" activeClassName="current">
+          Mes créations
+        </NavLink>
       </li>
       <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         A propos
