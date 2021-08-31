@@ -15,14 +15,14 @@
     margin-top: 3rem;
     @include mixins.for-phone-and-tablet-only {
       flex-wrap: wrap;
-      margin: 0;
+      margin-top: 2rem;
     }
 
     .skills_icons_box {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-right: 2rem;
+      margin: 0 2rem;
 
       .skills_icon {
         width: 8rem;
