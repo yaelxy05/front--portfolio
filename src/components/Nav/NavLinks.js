@@ -23,9 +23,10 @@ const NavLinks = (props) => {
         </NavLink>
       </li>
       <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-        A propos
+        <NavLink exact to="/contact" activeClassName="current">
+          Contact
+        </NavLink>
       </li>
-      <li onClick={() => props.isMobile && props.closeMobileMenu()}>Contact</li>
       <li onClick={() => props.isMobile && props.closeMobileMenu()}>Mon CV</li>
     </ul>
   );

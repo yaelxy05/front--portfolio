@@ -8,7 +8,7 @@ import Creations from 'src/components/Creations';
 import Skills from 'src/components/Skills';
 import Footer from 'src/components/Footer';
 import Page404 from 'src/components/404';
-
+import Contact from 'src/components/Contact';
 // == Import
 import './app.scss';
 
@@ -23,6 +23,9 @@ const App = () => {
         </Route>
         <Route path="/creations">
           <Creations />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
         <Route path="/" exact>
           <Home />
