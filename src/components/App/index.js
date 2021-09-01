@@ -7,6 +7,7 @@ import Home from 'src/components/Home';
 import Creations from 'src/components/Creations';
 import Skills from 'src/components/Skills';
 import Footer from 'src/components/Footer';
+import Page404 from 'src/components/404';
 
 // == Import
 import './app.scss';
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/" exact>
           <Home />
         </Route>
+        <Route path="/" component={() => <Page404 />} />
       </Switch>
       <Footer />
     </div>
