@@ -1,0 +1,43 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.skills_cms {
+  @include mixins.flexcenterColumn;
+  margin-top: 3rem;
+  .skills_cms--h2 {
+    @include mixins.h2Title;
+  }
+
+  .skills_cms--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 1rem;
+    @include mixins.for-phone-and-tablet-only {
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .skills_icons_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 2rem;
+
+      .skills_icon {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 15rem;
+        border: 1px solid vars.$colorPara;
+      }
+
+      p {
+        text-align: center;
+        margin: 1rem 0;
+        font-size: vars.$sizeTitlePhone;
+      }
+    }
+  }
+}

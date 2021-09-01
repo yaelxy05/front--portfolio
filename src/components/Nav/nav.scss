@@ -1,0 +1,234 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.nav {
+  .nav_banner--top {
+    display: flex;
+    @include mixins.for-phone-and-tablet-only {
+      justify-content: flex-end;
+    }
+    justify-content: space-around;
+    align-items: center;
+    height: 4.2rem;
+    box-shadow: 0px 1px 5px rgb(233, 233, 233);
+    z-index: 10;
+    .nav_wrapper-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      @include mixins.for-phone-and-tablet-only {
+        width: 80%;
+      }
+      .nav_burger-icon {
+        width: 35px;
+        height: 12px;
+        position: relative;
+        margin-right: 1rem;
+        @include mixins.for-tablet-portrait-up {
+          margin-right: 3rem;
+        }
+        margin-bottom: 1.4rem;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+
+        span {
+          display: block;
+          position: absolute;
+          height: 4px;
+          width: 100%;
+          background: #d3531a;
+          cursor: pointer;
+          border-radius: 9px;
+          opacity: 1;
+          left: 0;
+          transform: rotate(0deg);
+          transition: 0.25s ease-in-out;
+          @include mixins.for-tablet-landscape-up {
+            display: none;
+          }
+        }
+        span:nth-child(1) {
+          top: 0px;
+        }
+
+        span:nth-child(2) {
+          top: 12px;
+        }
+
+        span:nth-child(3) {
+          top: 24px;
+        }
+      }
+      .nav_burger-icon--open {
+        width: 35px;
+        height: 15px;
+        @include mixins.for-tablet-portrait-up {
+          margin-right: 2.5rem;
+        }
+        position: relative;
+        transform: rotate(90deg);
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        span {
+          display: block;
+          position: absolute;
+          height: 4px;
+          width: 100%;
+          background: #d3531a;
+          border-radius: 9px;
+          opacity: 1;
+          transform: rotate(135deg);
+          transition: 0.25s ease-in-out;
+          @include mixins.for-tablet-landscape-up {
+            display: none;
+          }
+        }
+        span:nth-child(1) {
+          top: 18px;
+          transform: rotate(135deg);
+        }
+        span:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+        }
+        span:nth-child(3) {
+          top: 18px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    .nav_logo--box {
+      @include mixins.for-phone-only {
+        margin: 0 1rem;
+      }
+      margin: 0 3rem;
+      .nav_logo {
+        height: 2.8rem;
+        width: auto;
+        border-radius: 10px;
+      }
+    }
+    .header_nav-mobile {
+      animation: burgerAnimationToDeactive 0.5s ease-out;
+      display: none;
+      z-index: 33;
+      position: absolute;
+      top: 4.2rem;
+      right: -15%;
+      @include mixins.for-tablet-landscape-up {
+        display: none;
+      }
+    }
+    .actived {
+      animation: burgerAnimationToActive 0.5s ease-in-out;
+      display: none;
+      @include mixins.for-tablet-landscape-up {
+        display: none;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: 20rem;
+      background-color: vars.$colorParaTransparent;
+      z-index: 22;
+      border-bottom-left-radius: 10px;
+      position: absolute;
+      left: 0;
+      top: 4.2rem;
+      @include mixins.for-tablet-landscape-up {
+        display: none;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      li {
+        padding: 0.5rem;
+        color: vars.$colorTitleLight;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          color: vars.$colorBorderBottom;
+        }
+      }
+    }
+
+    @keyframes burgerAnimationToActive {
+      0% {
+        transform: translateX(25%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    @keyframes burgerAnimationToDeactive {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-25%);
+      }
+    }
+    .nav_bar {
+      @include mixins.for-phone-and-tablet-only {
+        display: none;
+      }
+      ul {
+        @include mixins.for-desktop-up {
+          justify-self: flex-end;
+        }
+        @include mixins.flexAroundCenter;
+        .fa-home {
+          color: vars.$colorIcon;
+        }
+        li {
+          padding: 0 2rem;
+          color: vars.$colorTitleMenu;
+          font-weight: 500;
+
+          &:hover {
+            color: vars.$colorBorderBottom;
+            font-weight: bold;
+          }
+          .current {
+            border-bottom: 3px solid vars.$colorBorderBottom;
+            padding-bottom: 0.5rem;
+            transition: all ease-in-out 0.2s;
+          }
+
+          .current-home {
+            .fa-home {
+              color: vars.$colorBorderBottom;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav_banner {
+    height: 28rem;
+    background-image: url('../../assets/images/pexels-hristo-fidanov-1252873.jpg');
+    background-position: center;
+    background-size: cover;
+    @include mixins.flexcenterColumn;
+
+    p {
+      color: vars.$colorTitleLight;
+      font-size: vars.$sizeTitle + 1;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-family: vars.$policeTitle;
+    }
+  }
+}

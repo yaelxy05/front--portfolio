@@ -1,0 +1,63 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.page404 {
+  @include mixins.flexcenterColumn;
+  min-height: 80vh;
+
+  .page404_h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 1rem 0 3rem 0;
+    color: vars.$colorParaTransparent;
+  }
+
+  .page404_p {
+    margin: 3rem 0;
+    font-size: 2rem;
+    font-family: vars.$police404;
+    animation: anim404P 500ms ease-in-out;
+    @include mixins.for-tablet-portrait-up {
+      width: 80%;
+      margin-left: 1rem;
+    }
+    @include mixins.for-phone-only {
+      font-size: 1.5rem;
+      width: 80%;
+      margin-left: 1rem;
+      animation: none;
+    }
+  }
+
+  .page404_img {
+    margin-top: 2rem;
+    @include mixins.for-phone-only {
+      width: 60%;
+      height: auto;
+    }
+  }
+
+  @keyframes anim404P {
+    0% {
+      font-size: 0rem;
+    }
+    50% {
+      font-size: 1rem;
+      @include mixins.for-tablet-portrait-up {
+        font-size: 0.5rem;
+      }
+      @include mixins.for-phone-only {
+        font-size: 0.5rem;
+      }
+    }
+    100% {
+      font-size: 2rem;
+      @include mixins.for-tablet-portrait-up {
+        font-size: 1.5rem;
+      }
+      @include mixins.for-phone-only {
+        font-size: 1rem;
+      }
+    }
+  }
+}

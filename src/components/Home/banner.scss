@@ -1,0 +1,25 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.nav_banner {
+  height: 28rem;
+  width: 100%;
+  background-image: url('../../assets/images/pexels-hristo-fidanov-1252873.jpg');
+  background-position: center;
+  background-size: cover;
+  @include mixins.flexcenterColumn;
+
+  p {
+    color: vars.$colorTitleLight;
+    font-size: vars.$sizeTitle + 1;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: vars.$policeTitle;
+    @include mixins.for-tablet-portrait-up {
+      font-size: vars.$sizeTitle;
+    }
+    @include mixins.for-phone-only {
+      font-size: vars.$sizeTitlePhone;
+    }
+  }
+}

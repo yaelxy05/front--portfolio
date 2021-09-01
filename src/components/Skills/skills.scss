@@ -1,0 +1,12 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.skills {
+  @include mixins.flexColumnStartCenter;
+  min-height: 100vh;
+  width: 100%;
+
+  .skills_h1 {
+    @include mixins.h1Title;
+  }
+}

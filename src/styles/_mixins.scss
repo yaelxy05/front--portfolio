@@ -1,0 +1,81 @@
+@use 'src/styles/vars';
+
+@mixin flexStartCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnStartCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexcenterColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexAroundCenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin h1Title {
+  color: vars.$colorTitleMenu;
+  border-bottom: 3px solid vars.$colorBorderBottom;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 3rem 0;
+  font-size: vars.$sizeTitle;
+}
+@mixin h2Title {
+  color: vars.$colorPara;
+  border-bottom: 3px solid vars.$colorBorderBottom;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 2rem 0;
+  font-size: vars.$sizeTitlePhone;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-phone-and-tablet-only {
+  @media (max-width: 899px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) and (max-width: 899px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
