@@ -27,7 +27,9 @@ const App = () => {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/" component={() => <Page404 />} />
+        <Route path="*">
+          <Page404 />
+        </Route>
       </Switch>
       <Footer />
     </div>
