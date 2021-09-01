@@ -1,0 +1,82 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.contact {
+  @include mixins.flexColumnStartCenter;
+  min-height: 80vh;
+  width: 100%;
+  .contact_h1 {
+    @include mixins.h1Title;
+    margin-top: 5rem;
+  }
+
+  .form_box {
+    width: 100%;
+    @include mixins.flexcenterColumn;
+
+    .contact_form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 2rem 3rem;
+      padding: 3rem 0;
+
+      input {
+        width: 30rem;
+        padding: 1rem 0;
+        margin: 1rem 0;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 1px 2px 5px rgba(145, 145, 145, 0.301);
+
+        &::placeholder {
+          padding-left: 1rem;
+        }
+
+        @include mixins.for-tablet-portrait-up {
+          width: 20rem;
+        }
+
+        @include mixins.for-phone-only {
+          width: 10rem;
+        }
+      }
+      textarea {
+        resize: none;
+        width: 30rem;
+        margin: 1rem 0;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 1px 2px 5px rgba(145, 145, 145, 0.301);
+        &::placeholder {
+          padding: 1rem 0 0 1rem;
+        }
+
+        @include mixins.for-tablet-portrait-up {
+          width: 20rem;
+        }
+
+        @include mixins.for-phone-only {
+          width: 10rem;
+        }
+      }
+      button {
+        padding: 0.5rem 0;
+        margin: 2rem 0;
+        width: 30%;
+        border-radius: 20px;
+        border: none;
+        color: vars.$colorTitleLight;
+        font-weight: bold;
+        box-shadow: 4px 6px 7px rgba(55, 61, 151, 0.301);
+        background: vars.$colorPara;
+        align-self: center;
+
+        @include mixins.for-phone-only {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
