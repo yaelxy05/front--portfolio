@@ -25,14 +25,11 @@
       input {
         width: 30rem;
         padding: 1rem 0;
+        padding-left: 1rem;
         margin: 1rem 0;
         border: none;
         border-radius: 15px;
         box-shadow: 1px 2px 5px rgba(145, 145, 145, 0.301);
-
-        &::placeholder {
-          padding-left: 1rem;
-        }
 
         @include mixins.for-tablet-portrait-up {
           width: 20rem;
@@ -42,16 +39,14 @@
           width: 10rem;
         }
       }
-      textarea {
+      .contact_textarea {
         resize: none;
         width: 30rem;
         margin: 1rem 0;
+        padding: 1rem 0 0 1rem;
         border: none;
         border-radius: 15px;
         box-shadow: 1px 2px 5px rgba(145, 145, 145, 0.301);
-        &::placeholder {
-          padding: 1rem 0 0 1rem;
-        }
 
         @include mixins.for-tablet-portrait-up {
           width: 20rem;
