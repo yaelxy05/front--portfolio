@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { MESSAGE_SUBMIT } from 'src/actions/contact';
+import { MESSAGE_SUBMIT, contactResponse } from 'src/actions/contact';
 
 const API_URL =
   'https://apiwp.yaelhue-creation.com/portfolio/back/public/wp-json/contact-form-7/v1/contact-forms/5/feedback';
@@ -22,7 +22,10 @@ const contactMiddleware = (store) => (next) => (action) => {
           },
         })
         .then((response) => {
-          console.log(response.data);
+          console.log(response);
+          console.log(response.data.message);
+          console.log(response.data.posted_data_hash);
+          store.dispatch(contactResponse(response));
         })
         .catch((error) => {
           console.log(error);
