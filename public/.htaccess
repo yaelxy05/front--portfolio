@@ -6,4 +6,7 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-l
     RewriteRule . /index.html [L]
+    RewriteCond %{HTTPS} off [OR]
+	RewriteCond %{HTTP_HOST} ^www\.yaelhue-creation\.com [NC]
+	RewriteRule (.*) https://yaelhue-creation.com/$1 [L,R=301]
 </IfModule>
