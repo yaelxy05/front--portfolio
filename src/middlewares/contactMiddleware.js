@@ -3,7 +3,7 @@ import axios from 'axios';
 import { MESSAGE_SUBMIT } from 'src/actions/contact';
 
 const API_URL =
-  'http://apiwp.yaelhue-creation.com/portfolio/back/public/wp-json/contact-form-7/v1/contact-forms/5/feedback';
+  'https://apiwp.yaelhue-creation.com/portfolio/back/public/wp-json/contact-form-7/v1/contact-forms/5/feedback';
 
 const contactMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
