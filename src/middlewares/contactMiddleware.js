@@ -2,22 +2,27 @@ import axios from 'axios';
 
 import { MESSAGE_SUBMIT } from 'src/actions/contact';
 
-const API_URL = 'http://localhost/portfolio/back/public/wp-json/wp/v2/posts/';
+const API_URL =
+  'http://apiwp.yaelhue-creation.com/portfolio/back/public/wp-json/contact-form-7/v1/contact-forms/5/feedback';
 
 const contactMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case MESSAGE_SUBMIT: {
-      const { name, mail, message } = store.getState().contact;
-      const newMessage = {
-        name,
-        mail,
-        message,
-      };
+      const { username, mail, message } = store.getState().contact;
 
+      const data = new FormData();
+      data.set('username', username);
+      data.set('mail', mail);
+      data.set('message', message);
+      console.log(data);
       axios
-        .post(`${API_URL}`, newMessage)
+        .post(`${API_URL}`, data, {
+          headers: {
+            'Content-type': 'multipart/form-data ',
+          },
+        })
         .then((response) => {
-          console.log(response);
+          console.log(response.data);
         })
         .catch((error) => {
           console.log(error);

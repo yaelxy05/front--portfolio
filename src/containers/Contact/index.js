@@ -5,7 +5,7 @@ import Contact from 'src/components/Contact';
 
 const mapStateToProps = (state) => ({
   mail: state.contact.mail,
-  name: state.contact.name,
+  username: state.contact.username,
   message: state.contact.message,
 });
 

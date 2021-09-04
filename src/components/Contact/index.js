@@ -8,7 +8,7 @@ import './contact.scss';
 
 const Contact = ({
   changeFieldRegister,
-  name,
+  username,
   mail,
   message,
   handleMessage,
@@ -17,29 +17,31 @@ const Contact = ({
     evt.preventDefault();
     handleMessage();
   };
-
+  console.log(username);
   return (
     <div className="contact">
       <h1 className="contact_h1">Me contacter</h1>
       <div className="form_box">
         <form onSubmit={handleSubmit} className="contact_form">
           <ContactField
+            id="username"
             type="text"
             placeholder="Nom"
-            name="name"
+            name="username"
             manageChange={changeFieldRegister}
-            value={name}
+            value={username}
           />
+
           <ContactField
-            type="text"
+            id="mail"
+            type="email"
             placeholder="Email"
             name="mail"
-            manageChange={(value, identifier) =>
-              changeFieldRegister(value, identifier)
-            }
+            manageChange={changeFieldRegister}
             value={mail}
           />
           <ContactFieldTextarea
+            type="text"
             cols="30"
             rows="10"
             name="message"
@@ -59,13 +61,9 @@ const Contact = ({
 Contact.propTypes = {
   /** value for the email */
   mail: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 
-  /** called when onChange event is received by an input, two parameters :
-   * - new value
-   * - name
-   */
-  /** value name */
-  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
 
   changeFieldRegister: PropTypes.func.isRequired,
   /** called when the form is submitted */

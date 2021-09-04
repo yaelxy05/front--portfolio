@@ -1,7 +1,7 @@
 import { POST_MESSAGE } from 'src/actions/contact';
 
 const initialState = {
-  name: '',
+  username: '',
   mail: '',
   message: '',
 };
@@ -11,7 +11,7 @@ function contactReducer(state = initialState, action) {
     case POST_MESSAGE:
       return {
         ...state,
-        name: action.name === 'name' ? action.newValue : state.name,
+        username: action.name === 'username' ? action.newValue : state.username,
         mail: action.name === 'mail' ? action.newValue : state.mail,
         message: action.name === 'message' ? action.newValue : state.message,
       };

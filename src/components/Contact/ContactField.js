@@ -3,7 +3,7 @@ import React from 'react';
 // == Import
 import './contact.scss';
 // == Composant
-const ContactField = ({ value, type, name, placeholder, manageChange }) => {
+const ContactField = ({ value, type, name, placeholder, manageChange, id }) => {
   const handleChange = (evt) => {
     manageChange(evt.target.value, name);
   };
@@ -17,6 +17,7 @@ const ContactField = ({ value, type, name, placeholder, manageChange }) => {
         type={type}
         placeholder={placeholder}
         name={name}
+        id={id}
       />
     </>
   );
