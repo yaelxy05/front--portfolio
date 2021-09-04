@@ -1,9 +1,10 @@
-import { POST_MESSAGE } from 'src/actions/contact';
+import { POST_MESSAGE, CONTACT_RESPONSE } from 'src/actions/contact';
 
 const initialState = {
   username: '',
   mail: '',
   message: '',
+  response: null,
 };
 
 function contactReducer(state = initialState, action) {
@@ -14,6 +15,11 @@ function contactReducer(state = initialState, action) {
         username: action.name === 'username' ? action.newValue : state.username,
         mail: action.name === 'mail' ? action.newValue : state.mail,
         message: action.name === 'message' ? action.newValue : state.message,
+      };
+    case CONTACT_RESPONSE:
+      return {
+        ...state,
+        response: action.response,
       };
     default:
       return state;

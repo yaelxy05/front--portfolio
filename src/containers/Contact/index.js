@@ -1,12 +1,17 @@
 import { connect } from 'react-redux';
 
-import { postMessage, messageSubmit } from 'src/actions/contact';
+import {
+  postMessage,
+  messageSubmit,
+  contactResponse,
+} from 'src/actions/contact';
 import Contact from 'src/components/Contact';
 
 const mapStateToProps = (state) => ({
   mail: state.contact.mail,
   username: state.contact.username,
   message: state.contact.message,
+  response: state.contact.response,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -15,6 +20,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   handleMessage: () => {
     dispatch(messageSubmit());
+  },
+  contactResponse: (response) => {
+    dispatch(contactResponse(response));
   },
 });
 
