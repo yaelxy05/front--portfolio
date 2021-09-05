@@ -1,4 +1,8 @@
-import { POST_MESSAGE, CONTACT_RESPONSE } from 'src/actions/contact';
+import {
+  POST_MESSAGE,
+  CONTACT_RESPONSE,
+  RESET_FIELDS,
+} from 'src/actions/contact';
 
 const initialState = {
   username: '',
@@ -21,6 +25,14 @@ function contactReducer(state = initialState, action) {
         ...state,
         response: action.response,
       };
+    case RESET_FIELDS:
+      return {
+        ...state,
+        username: '',
+        mail: '',
+        message: '',
+      };
+
     default:
       return state;
   }

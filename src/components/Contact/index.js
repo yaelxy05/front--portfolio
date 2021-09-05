@@ -1,5 +1,5 @@
 // == Import react
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import ContactField from './ContactField';
 import ContactFieldTextarea from './ContactFieldTextarea';
@@ -14,14 +14,25 @@ const Contact = ({
   handleMessage,
   response,
   contactResponse,
+  resetFields,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     handleMessage();
   };
 
+  const ref = useRef();
+
+  useEffect(() => {
+    console.log(ref.current);
+  }, []);
+
   useEffect(() => {
     contactResponse();
+  }, []);
+
+  useEffect(() => {
+    resetFields();
   }, []);
 
   return (
@@ -78,7 +89,6 @@ Contact.propTypes = {
   /** value for the email */
   mail: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
-
   username: PropTypes.string.isRequired,
   response: PropTypes.object,
   changeFieldRegister: PropTypes.func.isRequired,
