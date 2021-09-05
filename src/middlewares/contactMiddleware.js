@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-import { MESSAGE_SUBMIT, contactResponse } from 'src/actions/contact';
+import {
+  MESSAGE_SUBMIT,
+  contactResponse,
+  resetFields,
+} from 'src/actions/contact';
 
 const API_URL =
   'https://apiwp.yaelhue-creation.com/portfolio/backPortfolio/public/wp-json/contact-form-7/v1/contact-forms/5/feedback';
@@ -23,6 +27,7 @@ const contactMiddleware = (store) => (next) => (action) => {
         })
         .then((response) => {
           store.dispatch(contactResponse(response));
+          store.dispatch(resetFields());
         })
         .catch((error) => {
           console.log(error);

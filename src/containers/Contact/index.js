@@ -4,6 +4,7 @@ import {
   postMessage,
   messageSubmit,
   contactResponse,
+  resetFields,
 } from 'src/actions/contact';
 import Contact from 'src/components/Contact';
 
@@ -23,6 +24,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   contactResponse: (response) => {
     dispatch(contactResponse(response));
+  },
+  resetFields: () => {
+    dispatch(resetFields());
   },
 });
 
