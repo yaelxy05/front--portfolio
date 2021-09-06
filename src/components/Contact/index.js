@@ -32,11 +32,11 @@ const Contact = ({
     if (response && response.data.status === 'mail_sent') {
       timeout = setTimeout(() => {
         contactResponse();
-      }, 2000);
+      }, 3000);
     } else if (response && response.data.status === 'validation_failed') {
       timeout = setTimeout(() => {
         contactResponse();
-      }, 2000);
+      }, 3000);
     }
     return () => clearTimeout(timeout);
   }, [response, handleSubmit]);
