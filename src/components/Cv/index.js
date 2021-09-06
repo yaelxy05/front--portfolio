@@ -20,7 +20,7 @@ const Cv = () => {
   const [defaultPdfFile] = useState(pdf);
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   return (
-    <div className="cv">
+    <div className="pdf-container">
       {defaultPdfFile && (
         <>
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.9.359/build/pdf.worker.min.js">
