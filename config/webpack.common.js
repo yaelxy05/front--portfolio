@@ -30,10 +30,10 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        { 
+        {
           from: paths.static,
           to: '',
-        }
+        },
       ],
     }),
 
@@ -76,6 +76,16 @@ module.exports = {
           {
             loader: 'file-loader',
             options: { outputPath: 'images/' },
+          },
+        ],
+      },
+
+      {
+        test: /\.(pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { outputPath: 'docs/' },
           },
         ],
       },
