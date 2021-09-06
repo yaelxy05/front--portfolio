@@ -1,8 +1,9 @@
 // == Import react
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ContactField from './ContactField';
 import ContactFieldTextarea from './ContactFieldTextarea';
+
 // == Import
 import './contact.scss';
 
@@ -21,20 +22,24 @@ const Contact = ({
     handleMessage();
   };
 
-  const ref = useRef();
-
-  useEffect(() => {
-    console.log(ref.current);
-  }, []);
-
   useEffect(() => {
     contactResponse();
-  }, []);
-
-  useEffect(() => {
     resetFields();
   }, []);
 
+  useEffect(() => {
+    let timeout;
+    if (response && response.data.status === 'mail_sent') {
+      timeout = setTimeout(() => {
+        contactResponse();
+      }, 2000);
+    } else if (response && response.data.status === 'validation_failed') {
+      timeout = setTimeout(() => {
+        contactResponse();
+      }, 2000);
+    }
+    return () => clearTimeout(timeout);
+  }, [response, handleSubmit]);
   return (
     <div className="contact">
       <h1 className="contact_h1">Me contacter</h1>

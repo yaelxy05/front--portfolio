@@ -3,7 +3,7 @@
 
 .contact {
   @include mixins.flexColumnStartCenter;
-  min-height: 80vh;
+  min-height: 100vh;
   width: 100%;
   .contact_h1 {
     @include mixins.h1Title;
@@ -15,16 +15,35 @@
     @include mixins.flexcenterColumn;
 
     .valid {
-      color: rgb(32, 170, 32);
+      border: solid 1px rgb(3, 105, 3);
+      background: rgb(61, 207, 68);
     }
 
     .fail {
-      color: red;
+      border: solid 1px rgb(105, 3, 12);
+      background: rgb(172, 72, 72);
     }
     .message_form {
-      margin-bottom: 3rem;
+      color: rgb(255, 255, 255);
+      padding: 1rem;
+      margin: 2rem;
       font-weight: bold;
       font-size: 1.1rem;
+      border-radius: 10px;
+      animation: messageToDeactive 1s ease-in-out;
+
+      @include mixins.for-phone-only {
+        font-size: 0.8rem;
+      }
+
+      @keyframes messageToDeactive {
+        0% {
+          transform: translateX(25%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
     }
 
     .contact_form {
@@ -49,7 +68,8 @@
         }
 
         @include mixins.for-phone-only {
-          width: 10rem;
+          width: 12rem;
+          margin: 1 1rem;
         }
       }
       .contact_textarea {
@@ -66,12 +86,13 @@
         }
 
         @include mixins.for-phone-only {
-          width: 10rem;
+          width: 12rem;
+          margin: 1 1rem;
         }
       }
       button {
         padding: 0.5rem 0;
-        margin: 2rem 0 1rem 0;
+        margin: 2rem 0 0 0;
         width: 30%;
         border-radius: 20px;
         border: none;
@@ -82,7 +103,7 @@
         align-self: center;
 
         @include mixins.for-phone-only {
-          width: 90%;
+          width: 70%;
         }
       }
     }
