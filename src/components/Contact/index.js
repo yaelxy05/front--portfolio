@@ -1,11 +1,9 @@
 // == Import react
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ContactField from './ContactField';
 import ContactFieldTextarea from './ContactFieldTextarea';
-// = Import yarn
-import { ToastContainer, toast, Zoom, Bounce } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 // == Import
 import './contact.scss';
 
