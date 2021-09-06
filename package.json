@@ -55,11 +55,15 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+
     "@react-pdf-viewer/core": "^2.8.0",
     "@react-pdf-viewer/default-layout": "^2.8.0",
-    "axios": "^0.21.1",
+   
     "pdfjs": "^2.4.6",
     "pdfjs-dist": "^2.9.359",
+
+    "axios": "^0.21.2",
+
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

@@ -15,6 +15,11 @@ module.exports = {
     publicPath: '/',
     filename: 'js/[name].[contenthash].js',
   },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true
+  },
   resolve: {
     alias: {
       src: paths.src,
@@ -35,6 +40,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       favicon: paths.assets + '/favicon.ico',
       template: paths.assets + '/index.html',
+      htaccess: paths.assets + '.htaccess',
     }),
   ],
 
