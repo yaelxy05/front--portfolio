@@ -1,0 +1,15 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.cv {
+  height: 100%;
+
+  .cv_box {
+    .cv_pdf {
+      width: 100%;
+      border: 0;
+      min-height: 105rem;
+      scroll-behavior: auto;
+    }
+  }
+}
