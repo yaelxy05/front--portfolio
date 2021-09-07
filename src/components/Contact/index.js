@@ -23,11 +23,14 @@ const Contact = ({
   };
 
   useEffect(() => {
+    // function who receives the response.data.message of api
     contactResponse();
+    // function who reinitialize the fields of form contact
     resetFields();
   }, []);
 
   useEffect(() => {
+    // Function who performs a timeout for remove the response message in the contact page
     let timeout;
     if (response && response.data.status === 'mail_sent') {
       timeout = setTimeout(() => {
