@@ -32,6 +32,7 @@
     @include mixins.for-phone-only {
       font-size: 1.5rem;
       width: 80%;
+      text-align: center;
       animation: none;
     }
   }
