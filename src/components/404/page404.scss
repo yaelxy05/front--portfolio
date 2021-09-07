@@ -21,7 +21,7 @@
     }
   }
   .page404_p {
-    margin: 3rem 0;
+    margin: 3rem 3rem;
     font-size: 2rem;
     font-family: vars.$police404;
     animation: anim404P 500ms ease-in-out;
@@ -39,6 +39,11 @@
 
   .page404_img {
     margin-top: 2rem;
+    @include mixins.for-tablet-portrait-up {
+      width: 70%;
+      height: auto;
+      margin: 2rem;
+    }
     @include mixins.for-phone-only {
       width: 60%;
       height: auto;
