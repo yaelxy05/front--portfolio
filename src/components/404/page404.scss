@@ -11,7 +11,15 @@
     margin: 1rem 0 3rem 0;
     color: vars.$colorParaTransparent;
   }
+  .page404_link--home {
+    font-weight: bold;
+    margin: 2rem 0;
 
+    &:hover {
+      color: vars.$colorBorderBottom;
+      font-size: 1.1rem;
+    }
+  }
   .page404_p {
     margin: 3rem 0;
     font-size: 2rem;
