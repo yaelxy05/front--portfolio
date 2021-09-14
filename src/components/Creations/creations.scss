@@ -4,9 +4,61 @@
 .creations {
   @include mixins.flexcenterColumn;
   margin: 2rem 0;
-  min-height: 40vh;
+  min-height: 80vh;
 
   .creations_h1 {
     @include mixins.h1Title;
+  }
+  .creations_box {
+    @include mixins.flexcenter;
+    flex-wrap: wrap;
+    margin: 0 2rem;
+
+    @include mixins.for-phone-and-tablet-only {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .creations_item {
+      @include mixins.flexcenterColumn;
+      .img_creations {
+        margin: 0 2rem;
+        width: 35rem;
+        height: auto;
+        border: solid 3px vars.$colorTitleMenu;
+        border-radius: 10px;
+        @include mixins.for-tablet-portrait-up {
+          width: 25rem;
+          margin: 0 2rem;
+        }
+        @include mixins.for-phone-only {
+          width: 20rem;
+          margin: 0 2rem;
+        }
+      }
+      .creations_title--box {
+        width: 35rem;
+        margin: 1rem 2rem 2rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mixins.for-tablet-portrait-up {
+          width: 25rem;
+        }
+        @include mixins.for-phone-only {
+          width: 20rem;
+        }
+        h2 {
+          text-align: center;
+          color: vars.$colorPara;
+          font-weight: 600;
+        }
+
+        .fa-github {
+          cursor: pointer;
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }
