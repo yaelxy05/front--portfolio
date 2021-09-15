@@ -24,7 +24,57 @@
       .img_creations {
         margin: 0 2rem;
         width: 35rem;
-        height: auto;
+        height: 23rem;
+        border: solid 3px vars.$colorTitleMenu;
+        border-radius: 10px;
+        @include mixins.for-tablet-portrait-up {
+          width: 25rem;
+          height: 15rem;
+          margin: 0 2rem;
+        }
+        @include mixins.for-phone-only {
+          width: 20rem;
+          height: 12rem;
+          margin: 0 2rem;
+        }
+        @include mixins.flexcenter;
+        p {
+          opacity: 0;
+          transform: translate(50%);
+          @include mixins.flexcenter;
+
+          &:hover {
+            transition: all ease-in-out 0.4s;
+            opacity: 1;
+            cursor: pointer;
+            background: vars.$colorParaTransparent;
+            color: vars.$colorTitleLight;
+            width: 70%;
+            height: 10rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            transform: translate(0%, 0%);
+            @include mixins.for-phone-only {
+              height: 7rem;
+            }
+          }
+        }
+      }
+      .img_dpm {
+        background-image: url('../../assets/images/screenshot_creations/desktop_screenshot-dpm.png');
+        background-position: center;
+        background-size: cover;
+      }
+      .img_portfolio {
+        background-image: url('../../assets/images/screenshot_creations/desktop_screenshot-yaelcreations.png');
+        background-position: center;
+        background-size: cover;
+      }
+      .img_creations2 {
+        margin: 0 2rem;
+        width: 35rem;
+        height: 23rem;
         border: solid 3px vars.$colorTitleMenu;
         border-radius: 10px;
         @include mixins.for-tablet-portrait-up {
