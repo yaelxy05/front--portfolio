@@ -38,7 +38,11 @@
           margin: 0 2rem;
         }
         @include mixins.flexcenter;
-        p {
+        a {
+          width: 100%;
+          @include mixins.flexcenter;
+
+          p {
           opacity: 0;
           transform: translate(50%);
           @include mixins.flexcenter;
@@ -59,7 +63,9 @@
               height: 7rem;
             }
           }
+          }
         }
+        
       }
       .img_dpm {
         background-image: url('../../assets/images/screenshot_creations/desktop_screenshot-dpm.png');
