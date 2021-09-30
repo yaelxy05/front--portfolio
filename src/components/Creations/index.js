@@ -14,7 +14,7 @@ const Creations = () => {
       <div className="creations_box">
         <div className="creations_item">
           <div className="img_creations img_dpm">
-            <a href="#">
+            <a href="https://dressing-des-petites-mains.yaelhue-creation.com/dpm/il-etait-plusieurs-doigts/public/">
               <p>Découvrez le site</p>
             </a>
           </div>
