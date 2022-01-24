@@ -25,7 +25,7 @@ const MobileNavigation = () => {
           <span className="line3"></span>
         </div>
       </div>
-
+    
       <div className={toggle ? 'actived' : 'header_nav-mobile'}>
         <ul className="header_link">
           {toggle && (
