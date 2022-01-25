@@ -38,6 +38,19 @@ const Creations = () => {
             </a>
           </div>
         </div>
+        <div className="creations_item">
+          <div className="img_creations img_bonnebourriche">
+            <a href="https://labonnebourriche.yaelhue-creation.com/">
+              <p>Découvrez le site</p>
+            </a>
+          </div>
+          <div className="creations_title--box">
+            <h2>La bonne bourriche</h2>
+            <a href="https://github.com/yaelxy05/Alabonnebourriche">
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
