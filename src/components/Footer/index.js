@@ -8,10 +8,10 @@ import './footer.scss';
 const Footer = () => (
   <div className="footer">
     <div className="footer_icon--top">
-      <a href="http://https://github.com/yaelxy05/">
+      <a href="https://github.com/yaelxy05/">
         <i className="fab fa-github"></i>
       </a>
-      <a href="http://https://www.linkedin.com/in/hueyael/">
+      <a href="https://www.linkedin.com/in/hueyael/">
         <i className="fab fa-linkedin-in"></i>
       </a>
     </div>
