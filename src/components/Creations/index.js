@@ -27,7 +27,7 @@ const Creations = () => {
         </div>
         <div className="creations_item dpm">
           <div className="img_creations img_portfolio">
-            <a href="http://yaelhue-creation.com/">
+            <a href="https://yaelhue-creation.com/">
               <p>Découvrez le site</p>
             </a>
           </div>
