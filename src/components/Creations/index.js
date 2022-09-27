@@ -51,6 +51,19 @@ const Creations = () => {
             </a>
           </div>
         </div>
+        <div className="creations_item">
+          <div className="img_creations img_littleGarden">
+            <a href="https://littlegarden.yaelhue-creation.com/">
+              <p>Découvrez le site</p>
+            </a>
+          </div>
+          <div className="creations_title--box">
+            <h2>Little Garden</h2>
+            <a href="https://github.com/yaelxy05/my-little-garden-front">
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
